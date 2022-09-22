@@ -24,7 +24,7 @@ public class SkillsController {
     @GetMapping("form")
     public String form() {
         return "<html>" +
-                "<form method='post'>" +
+                "<form method='post' action='formdata'>" +
                 "<h2>Name:</h2>" +
                 "<input type='text' name='name'>" +
                 "<h2>My favorite language</h2>" +
@@ -51,7 +51,7 @@ public class SkillsController {
 
     }
 
-    @PostMapping("form")
+    @PostMapping("formdata")
     public String formResults(@RequestParam String name, @RequestParam String language1, @RequestParam String language2, @RequestParam String language3){
 
         return "<html>" +
